@@ -13,10 +13,6 @@ This project implements two separate Python applications: one for visualizing au
 ## How to Run
 
 ### 1. Audio Plotting Program:
-   - Ensure you have the required libraries installed:
-     ```bash
-     pip install pillow
-     ```
    - Run the program:
      ```bash
      python wavPlot.py
