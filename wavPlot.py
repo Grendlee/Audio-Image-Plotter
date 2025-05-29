@@ -36,6 +36,14 @@ class displayWaves:
         print("reading");
 
         with wave.open(path, 'rb') as file:
+
+            #check if 16 bit per sample
+            sampwidth = file.getsampwidth()
+            if sampWidth == 2: # 2 bytes = 16 bits
+                print("This is a 16-bit WAV file.")
+            else:
+                print("This is NOT a 16-bit WAV file.")
+    
             totalSamples = file.getnframes()
             sampleFreq = file.getframerate()
             rawBinString = file.readframes(totalSamples)
